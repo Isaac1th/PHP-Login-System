@@ -3,7 +3,7 @@
 if (isset($_POST["submit"]))
 {
     // Grabbing the data
-    $uid = $_POST["submit"];
+    $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["pwdrepeat"];
     $email = $_POST["email"];
@@ -12,7 +12,7 @@ if (isset($_POST["submit"]))
     include '../classes/Dbh.classes.php';
     include '../classes/Signup.classes.php';
     include '../classes/Signup.contr.classes.php';
-    $signup = new SignupContr($uid, $pwd, $pwdrepeat, $email);
+    $signup = new SignupContr($uid, $pwd, $pwdRepeat, $email);
 
     // Running error handlers and user signup
     $signup->SignupUser();
